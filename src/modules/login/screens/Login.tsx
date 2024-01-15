@@ -13,7 +13,6 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { MenuUrl } from '../../../shared/enums/MenuUrl.wnum';
 import Text from '../../../shared/components/text/Text';
-import { textTypes } from '../../../shared/components/text/textTypes';
 import React from 'react';
 
 const Login = () => {
@@ -26,7 +25,6 @@ const Login = () => {
     handleOnPress,
     handleOnChangeEmail,
     handleOnChangePassword,
-    handleGoToCreateUser,
   } = useLogin();
  useEffect(() => {
   const text = async () =>{
@@ -63,13 +61,10 @@ const Login = () => {
           placeholder="Digite sua senha"
 
         />
-        <TouchableOpacity onPress={handleGoToCreateUser}>
+        <TouchableOpacity>
             <Text
-            customMargin="16px"
-            type={textTypes.PARAGRAPH_SEMI_BOLD}
-            color={theme.colors.mainTheme.primary}
+            customMargin="10px"
             >
-              Cadastrar
             </Text>
         </TouchableOpacity>
         <Button
@@ -77,6 +72,11 @@ const Login = () => {
           type={theme.buttons.buttonsTheme.primary}
           title="ENTRAR"
           onPress={handleOnPress}
+        />
+          <Imagelog
+          
+          resizeMode="contain"
+          source={require('../../../assets/images/2021_logo-luminato_othon-de-carvalho_page-0002-removebg-preview.png')}
         />
       </ContainerLogin>
     </View>

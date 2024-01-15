@@ -3,7 +3,6 @@ import {useState} from 'react';
 import {RequestLogin} from '../types/requestLogin';
 import ConnectionAPI, { connectionAPIPost,MetgoType } from '../functions/connection/connectionAPI';
 import { ReturnLogin } from '../types/returnLogin';
-import { useUserReducer } from '../../story/reducers/userReducer/useUserReducer';
 import { useGlobalRducer } from '../../story/reducers/globalReducer/useGlobalReducer';
 import { NavigationProp, ParamListBase, useNavigation } from '@react-navigation/native';
 // import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -20,7 +19,6 @@ interface requestProps<T, B = unknown> {
 export const useRequest = () => {
   const {reset} = useNavigation<NavigationProp<ParamListBase>>();
   // const navigation = useNavigation<NativeStackNavigationProp<any>>();
-    const {setUser} = useUserReducer();
     const {setModal} = useGlobalRducer();
   const [loading, setLoading] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -28,6 +26,7 @@ const request = async <T, B = unknown>({ url, method, saveGlobal, body, message 
   setLoading(true);
   const returnObject: T| undefined = await ConnectionAPI.connect<T, B>(url, method, body).then(
     (result)=>{
+      console.log(result+"dasdsasdsad")
       if (saveGlobal){
         saveGlobal(result);
       }
@@ -54,8 +53,7 @@ return returnObject;
   const authRequest = async (body: RequestLogin) => {
     setLoading(true);
     await connectionAPIPost<ReturnLogin>('http://192.168.2.181:8080/login', body).then((result)=>{
-        setAuthorizationToken(result.accessToken);
-        setUser(result.user);
+        setAuthorizationToken(result.token);
         reset({
           index: 0,
           routes: [{name: MenuUrl.HOME}],

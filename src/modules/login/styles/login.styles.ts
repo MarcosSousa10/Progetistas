@@ -14,4 +14,5 @@ export const Imagelog = styled.Image`
   width: 100px;
   height: 100px;
   margin-bottom: 24px;
+  margin-top: 24px;
 `;

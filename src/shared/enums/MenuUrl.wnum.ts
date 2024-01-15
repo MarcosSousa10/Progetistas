@@ -2,12 +2,13 @@
 export enum MenuUrl {
   LOGIN = 'Login',
   HOME = 'Home',
-  ORDER = 'Order',
+  BAIXAR = 'Baixar',
   PROFILE = 'Profile',
-  CREATE_USER = 'CreateUser',
+  MENU = 'Menu',
   SPLASH = 'Splash',
-  PRODUCT = 'Product',
-  CART = 'Cart',
-  SEARCH_PRODUCT = 'SearchProduct',
+  PRODUCT = 'Ap. Projetistas',
+  ESTORNAR = 'Estornar',
+  PROJETISTASSTATUS = 'Validacão De Status',
+  
 
 }

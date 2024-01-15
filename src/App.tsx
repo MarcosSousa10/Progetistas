@@ -11,8 +11,13 @@ import story from './story';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Icon} from './shared/components/icon/Icon';
-import Home from './modules/home';
 import {theme} from './shared/themes/theme';
+import Product from './modules/product';
+import Splash from './modules/splash';
+import Estornar from './modules/estornar/screens/Estornar';
+import Baixar from './modules/baixar';
+import Menu from './modules/menu';
+import ProjetistasStatus from './modules/product copy';
 const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
@@ -25,18 +30,18 @@ const TabNavigation = () => {
       case MenuUrl.HOME:
         iconName = 'home';
         break;
-      case MenuUrl.ORDER:
-        iconName = 'books';
+      case MenuUrl.BAIXAR:
+        iconName = 'credit-card';
         break;
-      case MenuUrl.CART:
-        iconName = 'cart';
+      case MenuUrl.MENU:
+        iconName = 'menu';
         break;
-      case MenuUrl.SEARCH_PRODUCT:
-        iconName = 'search';
+      case MenuUrl.PROJETISTASSTATUS:
+        iconName = 'clipboard';
         break;
       case MenuUrl.PROFILE:
       default:
-        iconName = 'profile';
+        iconName = 'list';
         break;
     }
     return <Icon name={iconName} size={16} color={color} />;
@@ -45,8 +50,8 @@ const TabNavigation = () => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         tabBarIcon: ({color}) => renderTabBarIcon(color, route),
-        tabBarActiveTintColor: theme.colors.mainTheme.primary,
-        tabBarInactiveTintColor: theme.colors.grayTheme.gray80,
+        tabBarActiveTintColor: theme.colors.neutraTheme.darkBlack,
+        tabBarInactiveTintColor: theme.colors.neutraTheme.gray,
         tabBarLabelStyle: {
           marginBottom: 8,
         },
@@ -56,26 +61,26 @@ const TabNavigation = () => {
         },
       })}>
       <Tab.Screen
-        name={MenuUrl.HOME}
-        component={Home}
+        name={MenuUrl.PRODUCT}
+        component={Product}
         options={{headerShown: false}}
       />
       {/* <Tab.Screen
-        name={MenuUrl.SEARCH_PRODUCT}
-        component={SearchProduct}
-        options={{title: 'Buscar', headerShown: false}}
+        name={MenuUrl.PROJETISTASSTATUS}
+        component={ProjetistasStatus}
+        options={{title: 'Validar Status', headerShown: false}}
+      /> */}
+      <Tab.Screen
+        name={MenuUrl.BAIXAR}
+        component={Baixar}
+        options={{title: 'Baixar', headerShown: false}}
       />
       <Tab.Screen
-        name={MenuUrl.CART}
-        component={Cart}
-        options={{title: 'Carrinho ', headerShown: false}}
+        name={MenuUrl.MENU}
+        component={Menu}
+        options={{title: 'Menu ', headerShown: false}}
       />
-      <Tab.Screen
-        name={MenuUrl.ORDER}
-        component={Orders}
-        options={{title: 'Pedidos', headerShown: false}}
-      />
-      <Tab.Screen
+      {/* <Tab.Screen
         name={MenuUrl.PROFILE}
         component={Profile}
         options={{title: 'Perfil', headerShown: false}}
@@ -91,6 +96,12 @@ function App(): React.JSX.Element {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
+            name={MenuUrl.SPLASH}
+            component={Splash}
+            options={{headerShown: false}}
+          />
+
+          <Stack.Screen
             name={MenuUrl.LOGIN}
             component={Login}
             options={{headerShown: false}}
@@ -99,6 +110,16 @@ function App(): React.JSX.Element {
             name={MenuUrl.HOME}
             component={TabNavigation}
             options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name={MenuUrl.ESTORNAR}
+            component={Estornar}
+            options={{headerShown: true}}
+          />
+          <Stack.Screen
+            name={MenuUrl.PROJETISTASSTATUS}
+            component={ProjetistasStatus}
+            options={{headerShown: true}}
           />
         </Stack.Navigator>
       </NavigationContainer>

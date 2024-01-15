@@ -30,7 +30,7 @@ export const ButtonSecondary = styled(ButtonContainer)<ButtonContainerProps>`
   background-color: transparent;
 
   border-width: 1px;
-  border-color: ${theme.colors.mainTheme.primary};
+  border-color: ${theme.colors.neutraTheme.darkBlack};
 `;
 export const ActivityIndicatorButton = styled.ActivityIndicator`
 margin-left: 8px;

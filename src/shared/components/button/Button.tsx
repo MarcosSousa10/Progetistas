@@ -41,7 +41,7 @@ const Button = ({ title, type, loading, disabled, margin, onPress, ...props }: B
     case theme.buttons.buttonsTheme.secondary:
       return (
         <ButtonSecondary {...props} margin={margin} onPress={handleOnPress}>
-          {renderText(theme.colors.mainTheme.primary)}
+          {renderText(theme.colors.neutraTheme.darkGray)}
         </ButtonSecondary>
       );
     case theme.buttons.buttonsTheme.primary:
@@ -52,8 +52,8 @@ const Button = ({ title, type, loading, disabled, margin, onPress, ...props }: B
             start={{ x: 0.0, y: 0.0 }}
             end={{ x: 1.0, y: 1.0 }}
             colors={[
-              theme.colors.pupleTheme.purple80,
-              theme.colors.pinkTheme.pink80,
+              theme.colors.neutraTheme.darkBlack,
+              theme.colors.neutraTheme.gray,
             ]}>
             {renderText(theme.colors.neutraTheme.white)}
           </GrandientButton>

@@ -6,6 +6,10 @@ export const grayTheme = {
 export const neutraTheme = {
   white: '#ffffff',
   black: '#262824',
+  darkBlack: '#111111',
+  gray:'#808080',
+  darkGray:'#666666',
+  lightGray:'#a0a0a0',
 };
 export const mainTheme = {
   primary: '#8C29B0',

@@ -7,10 +7,7 @@ import { useState} from 'react';
 import { useRequest } from '../../../shared/hooks/useRequest';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../story';
-import { NavigationProp, ParamListBase, useNavigation } from '@react-navigation/native';
-import { MenuUrl } from '../../../shared/enums/MenuUrl.wnum';
 export const useLogin = () => {
-  const navigation = useNavigation<NavigationProp<ParamListBase>>();
     const {user} = useSelector((state: RootState)=> state.userReducer);
   const [login, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -23,9 +20,7 @@ console.log('user: ', user);
     password,
  });
   };
-  const handleGoToCreateUser = ()=>{
-    navigation.navigate(MenuUrl.CREATE_USER);
-  };
+
   const handleOnChangeEmail = (
     event: NativeSyntheticEvent<TextInputChangeEventData>,
   ) => {
@@ -45,6 +40,5 @@ console.log('user: ', user);
     handleOnPress,
     handleOnChangeEmail,
     handleOnChangePassword,
-    handleGoToCreateUser,
   };
 };

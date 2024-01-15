@@ -38,7 +38,8 @@ com.othondecarvalho.app-merged_res-36 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDe
 com.othondecarvalho.app-debug-37 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\android\app\src\debug\res
 com.othondecarvalho.app-main-38 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\android\app\src\main\res
 com.othondecarvalho.app-packaged_res-39 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\packaged_res\debug
-com.othondecarvalho.app-packaged_res-40 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-linear-gradient\android\build\intermediates\packaged_res\debug
-com.othondecarvalho.app-packaged_res-41 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
-com.othondecarvalho.app-packaged_res-42 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
-com.othondecarvalho.app-packaged_res-43 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
+com.othondecarvalho.app-packaged_res-40 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\@react-native-picker\picker\android\build\intermediates\packaged_res\debug
+com.othondecarvalho.app-packaged_res-41 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-linear-gradient\android\build\intermediates\packaged_res\debug
+com.othondecarvalho.app-packaged_res-42 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+com.othondecarvalho.app-packaged_res-43 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.othondecarvalho.app-packaged_res-44 D:\AREA DE TRABALHO\Nova pasta (4)\OthonDeCarvalho\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
