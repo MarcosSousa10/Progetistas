@@ -10,10 +10,6 @@ import { logout } from '../../../shared/functions/connection/auth';
 
 const Menu = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
-
-
-
-
   return (
     <ScrollView >
 

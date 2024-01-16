@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps *//* eslint-disable prettier/prettier *//* eslint-disable react/react-in-jsx-scope */
-import {TouchableOpacity, View} from 'react-native';
-import {ContainerLogin, Imagelog} from '../styles/login.styles';
+import { TouchableOpacity, View } from 'react-native';
+import { ContainerLogin, Imagelog } from '../styles/login.styles';
 import Button from '../../../shared/components/button/Button';
 import Input from '../../../shared/components/input/input';
-import {theme} from '../../../shared/themes/theme';
-import {useLogin} from '../hooks/useLogin';
+import { theme } from '../../../shared/themes/theme';
+import { useLogin } from '../hooks/useLogin';
 import { useEffect } from 'react';
 import { connectionAPIGet } from '../../../shared/functions/connection/connectionAPI';
 import { URL_USER } from '../../../shared/constants/urls';
@@ -16,7 +16,7 @@ import Text from '../../../shared/components/text/Text';
 import React from 'react';
 
 const Login = () => {
-   const navigation = useNavigation<NativeStackNavigationProp<any>>();
+  const navigation = useNavigation<NativeStackNavigationProp<any>>();
   const {
     login,
     password,
@@ -26,16 +26,16 @@ const Login = () => {
     handleOnChangeEmail,
     handleOnChangePassword,
   } = useLogin();
- useEffect(() => {
-  const text = async () =>{
-    const result = await connectionAPIGet<UserType>(URL_USER).catch(()=> undefined);
-    console.log(result);
-    if (result){
-      navigation.navigate(MenuUrl.HOME);
-    }
-  };
-  text();
- }, []);
+  useEffect(() => {
+    const text = async () => {
+      const result = await connectionAPIGet<UserType>(URL_USER).catch(() => undefined);
+      console.log(result);
+      if (result) {
+        navigation.navigate(MenuUrl.HOME);
+      }
+    };
+    text();
+  }, []);
 
   return (
     <View>
@@ -62,10 +62,10 @@ const Login = () => {
 
         />
         <TouchableOpacity>
-            <Text
+          <Text
             customMargin="10px"
-            >
-            </Text>
+          >
+          </Text>
         </TouchableOpacity>
         <Button
           loading={loading}
@@ -73,8 +73,7 @@ const Login = () => {
           title="ENTRAR"
           onPress={handleOnPress}
         />
-          <Imagelog
-          
+        <Imagelog
           resizeMode="contain"
           source={require('../../../assets/images/2021_logo-luminato_othon-de-carvalho_page-0002-removebg-preview.png')}
         />

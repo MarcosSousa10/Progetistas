@@ -26,7 +26,6 @@ const request = async <T, B = unknown>({ url, method, saveGlobal, body, message 
   setLoading(true);
   const returnObject: T| undefined = await ConnectionAPI.connect<T, B>(url, method, body).then(
     (result)=>{
-      console.log(result+"dasdsasdsad")
       if (saveGlobal){
         saveGlobal(result);
       }
